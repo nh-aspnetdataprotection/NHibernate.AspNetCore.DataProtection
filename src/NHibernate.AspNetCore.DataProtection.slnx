@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="NHibernate.AspNetCore.DataProtection.Test/NHibernate.AspNetCore.DataProtection.Test.csproj" />
+  <Project Path="NHibernate.AspNetCore.DataProtection/NHibernate.AspNetCore.DataProtection.csproj" />
+</Solution>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Description>Provides a mechanism for storing ASP.NET Core data protection keys to a database using NHibernate.</Description>
+        <TargetFrameworks>net10.0;net8.0</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <Copyright>Copyright 2026 Dennis Gronewold</Copyright>
+        <Authors>Dennis Gronewold</Authors>
+        <PackageReleaseNotes>
+            Initial release
+        </PackageReleaseNotes>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>nhibernate asp.net core dataprotection</PackageTags>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/nh-aspnetdataprotection/NHibernate.AspNetCore.DataProtection</RepositoryUrl>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <IsPackable>true</IsPackable>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PackageTags>nhibernate aspnetcore dataprotection</PackageTags>
+        <DebugType>embedded</DebugType>
+        <SignAssembly>True</SignAssembly>
+        <PublicSign>false</PublicSign>
+        <AssemblyOriginatorKeyFile>NHibernate.AspNetCore.DataProtection.snk</AssemblyOriginatorKeyFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="10.0.11 "/>
+        <PackageReference Include="NHibernate" Version="5.4.10"/>
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="docs\README.md" Pack="true" PackagePath="\" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MinVer" Version="4.3.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+</Project>
