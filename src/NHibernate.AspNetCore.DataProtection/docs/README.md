@@ -17,7 +17,7 @@ builder.Services.AddDataProtection().
                  PersistKeysToNHibernateSession();
 ```
 
-The included `DataProtectionKey` class needs to added to your NHibernate `Configuration` either by mapping it yourself or by using one of the provided extension methods. For example:
+The included `DataProtectionKey` class needs to be added to your NHibernate `Configuration` either by mapping it yourself or by using one of the provided extension methods. For example:
 
 ```
 var configuration = new Configuration().DataBaseIntegration(c =>
@@ -28,7 +28,7 @@ var configuration = new Configuration().DataBaseIntegration(c =>
                                                             });
 configuration.AddDataProtectionKeyMapping();
 ```
-You can also use your existing `ModelMapper` instance if you are already using NHibernates mapping by code:
+You can also use your existing `ModelMapper` instance if you are already using NHibernate's mapping by code:
 
 ```
 var configuration = new Configuration()
