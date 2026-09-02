@@ -22,6 +22,8 @@ jobs:
         run: dotnet restore src/NHibernate.AspNetCore.DataProtection/
       - name: Build
         run: dotnet build --no-restore -c Release src/NHibernate.AspNetCore.DataProtection/
+      - name: Test
+        run: dotnet test --no-build -c Release --project src/NHibernate.AspNetCore.DataProtection.Test/
       - name: Pack
         run: dotnet pack -c Release -o ./nupkgs --no-build src/NHibernate.AspNetCore.DataProtection/
       - name: NuGet login (OIDC → temp API key)
